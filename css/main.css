@@ -1,24 +1,3 @@
-:root {
-  --hover-color: #2196f3;
-  --team-color: #757575;
-  --white-text: #ffffff;
-  --site-nav-text: #212121;
-  --back-list-color: #f5f4fa;
-  --special-btn-color: #188ce8;
-  --color-black: #000000;
-  --footer-bgc: #2f303a;
-  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-body {
-  color: #ffffff;
-  font-family: "Roboto", sans-serif;
-}
-
-.no-scroll {
-  overflow: hidden;
-}
-
 * {
   margin: 0;
 }
@@ -57,78 +36,7 @@ img {
   height: auto;
 }
 
-.list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-@media screen and (min-width: 1200px) {
-  .list {
-    flex-wrap: wrap;
-  }
-}
-
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0, 0, 0, 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  margin: -1px;
-}
-
-.container {
-  width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
-}
-@media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container {
-    width: 1200px;
-  }
-}
-
-.logo {
-  font-family: "Raleway", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-  color: var(--hover-color);
-  display: inline-block;
-  padding: 16px 0;
-  text-decoration: none;
-}
-.logo-studio {
-  color: var(--color-black);
-}
-@media screen and (max-width: 1199px) {
-  .logo {
-    font-size: 24px;
-    line-height: 28px;
-  }
-}
-
 .footer {
-  display: flex;
-  justify-content: space-between;
   background: #001414;
   padding: 25px 32px 25px 15px;
   margin-left: auto;
@@ -138,29 +46,77 @@ img {
 }
 @media screen and (min-width: 768px) {
   .footer {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer {
+    justify-content: start;
+    gap: 20px;
   }
 }
 
 .footer-container {
   display: flex;
-  flex-direction: column;
-  gap: 25px;
+  justify-content: space-between;
 }
 @media screen and (min-width: 768px) {
   .footer-container {
     flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer-container {
+    min-width: 590px;
+    gap: 20px;
+    justify-content: start;
+  }
+}
+
+.footer-top-title {
+  display: flex;
+  height: 100%;
+  margin-bottom: auto;
+}
+@media screen and (min-width: 1280px) {
+  .footer-top-title {
+    min-width: 285px;
   }
 }
 
 .footer-title {
+  display: flex;
+  justify-content: center;
+  width: 116px;
+  text-align: center;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.17;
-  text-align: center;
-  margin-right: auto;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 768px) {
+  .footer-title {
+    height: 100%;
+    margin-bottom: auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer-title {
+    width: 187px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .footer-list {
+    min-width: 285px;
+  }
 }
 
 .footer-list li:not(:last-child) {
@@ -181,7 +137,7 @@ img {
   border-bottom: 1px solid #86E543;
 }
 
-.footer-link-name {
+.footer-link-mail {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -190,6 +146,15 @@ img {
   margin-bottom: 8px;
 }
 
+.footer-link-tel {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  margin-bottom: 8px;
+  margin-top: 15px;
+}
 .footer-mail {
   font-family: "Roboto";
   font-style: normal;
@@ -210,20 +175,34 @@ img {
   color: #8D9289;
 }
 
-.footer-list-link {
-  margin-top: 15px;
-}
-
 .footer-list-link li:not(:last-child) {
   margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1280px) {
+  .footer-social {
+    min-width: 285px;
+  }
 }
 
 .footer-social-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 32px;
-  margin-top: 81px;
+}
+@media screen and (min-width: 768px) {
+  .footer-social-list {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer-social-list {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 
 .footer-link-svg {
